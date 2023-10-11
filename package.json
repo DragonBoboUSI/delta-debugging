@@ -1,0 +1,14 @@
+{
+    "name": "delta-debugging",
+    "version": "1.0.0",
+    "description": "",
+    "main": "delta-debugging.ts",
+    "scripts": {
+        "test": "ts-node delta-debugging.ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "ts-node": "^10.9.1"
+    }
+}
