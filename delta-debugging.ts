@@ -1,4 +1,4 @@
-let htmlPage =
+const htmlPage =
     '<td align=left valign=top>' +
     '<SELECT NAME="op sys" MULTIPLE SIZE=7>' +
     '<OPTION VALUE="All">All<OPTION VALUE="Windows 3.1">Windows 3.1' +
@@ -24,8 +24,6 @@ let htmlPage =
     '<OPTION VALUE="blocker">blocker<OPTION VALUE="critical">critical<OPTION VALUE="major">major<OPTION VALUE="normal">' +
     'normal<OPTION VALUE="minor">minor<OPTION VALUE="trivial">trivial<OPTION VALUE="enhancement">enhancement</SELECT></tr></table>';
 
-const testString =
-    '08315701551nfoapf1d124241e019u2eni10djiq091ji028194851201812058y1hd01802ej10d9j210dj102dj';
 const test = (input: string) => input.includes('<SELECT>');
 
 let iterations = 0;
@@ -36,7 +34,7 @@ const debug: (granularity: number, input: string) => null | string = (
     console.log(
         `\nIteration n.${++iterations}: Granularity of ${granularity} on input ${input}`,
     );
-    if (granularity <= 0) {
+    if (granularity <= 1) {
         return input;
     }
     let start = 0;
